@@ -8,8 +8,9 @@
 }
 
 #filter-bar{
-  width: 75vw;
-  display: inline-block;
+  width: 20vw;
+  padding: 10px;
+  margin: auto;
   background-color:rgb(245, 245, 220);
 }
 
