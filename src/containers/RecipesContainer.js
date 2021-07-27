@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
-
+import { recipeArray } from "../recipeArray"
 import FilterBar from "../components/FilterBar"
-import Recipe from '../components/Recipe'
 
 class RecipesContainer extends Component {
-    
-    componentDidMount(){
-        console.log("RECIPE CONTAINER MOUNTED")
-    }
-
     render() {
-        const recipesJSX = this.props.recipes.map((r,idx) => {
+        const recipesJSX = recipeArray.recipes.map(r => {
             return (
-            <Recipe saved={this.props.saved} addRecipe={this.props.addRecipe} recipe={r} key={idx} />
+            <div className="card">
+                <h3>Title: {r.title}</h3>
+                <p>Time: {r.time} mins</p>
+                <img alt="recipe" src={r.image}></img> <br/>
+                <button> Add to Recipe Book </button> 
+                <div dangerouslySetInnerHTML={{__html: r.instructions}}></div>
+            </div>
         )}) 
         
         return (
