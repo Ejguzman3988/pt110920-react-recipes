@@ -11,11 +11,32 @@ class App extends Component {
     saved: []
   }
 
+  // We want to fetch on componentDidMount
+  componentDidMount(){
+    fetch('http://localhost:3001/recipes') 
+      .then(resp => resp.json())
+      .then(recipes => {
+        this.setState({ recipes: recipes}, () => console.log("THIS IS THE LOG FROM SETTING STATE:", this.state))
+      })
+  }
+
+  addToSaved = (id) => {
+    const foundRecipe = this.state.recipes.find((recipe) => {
+      return recipe.id === id
+    })
+
+    this.setState((prevState) => {
+      // return { saved: prevState.saved.concat(foundRecipe) }
+      return { saved: [...prevState.saved, foundRecipe]}
+    }, () => console.log("ADDTOSAVED: ", this.state.saved))
+  }
+
   render() {
+
     return (
-      <div class="app">
+      <div className="app">
         <NavBar /> 
-        <RecipesContainer /> 
+        <RecipesContainer saved={this.state.saved} addToSaved={this.addToSaved} recipes={this.state.recipes} /> 
       </div>
     )
   }
