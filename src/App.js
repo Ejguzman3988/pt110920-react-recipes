@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import RecipesContainer from './containers/RecipesContainer'
+import SavedRecipes from './containers/SavedRecipes'
 import NavBar from './components/NavBar'
 import "./App.css"
 
@@ -14,7 +15,7 @@ class App extends Component {
     return (
       <div class="app">
         <NavBar /> 
-        <RecipesContainer />
+        <RecipesContainer /> 
       </div>
     )
   }
