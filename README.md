@@ -4,7 +4,7 @@ If you are insterested in the backend for this application here is a link to my 
 
 ## Component Lifecycle Methods
 
-Each component that you write has multiple 'lifecycle methods'. These methods are methods that we can override to run code at certain times in our components lifecycle. [Here is the react documentation on lifecycle methods.](https://reactjs.org/docs/react-component.html) There are multiple stages of a components lifecycle.
+Each component that you write has multiple 'lifecycle methods'. These methods are methods that we can override to run code at certain times in our components lifecycle. [Here is the react documentation on lifecycle methods.](https://reactjs.org/docs/react-component.html) There are multiple stages of a components lifecycle. [Diagram](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 ### Common Lifecycles
 
