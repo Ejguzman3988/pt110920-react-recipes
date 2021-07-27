@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { recipeArray } from "../recipeArray"
+import FilterBar from "../components/FilterBar"
 
 class RecipesContainer extends Component {
     render() {
-        debugger
         const recipesJSX = recipeArray.recipes.map(r => {
             return <div className="card">
                 <h3>Title: {r.title}</h3>
@@ -16,6 +16,7 @@ class RecipesContainer extends Component {
         
         return (
             <div id="recipe-container">
+                <FilterBar />
                 {recipesJSX}
             </div>
         )

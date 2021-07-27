@@ -1,5 +1,16 @@
+.app{
+  display:contents;
+  width: 80vw;
+}
+
 #recipe-container{
   text-align: center;
+}
+
+#filter-bar{
+  width: 75vw;
+  display: inline-block;
+  background-color:rgb(245, 245, 220);
 }
 
 #nav-bar{
