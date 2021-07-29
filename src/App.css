@@ -3,6 +3,12 @@
   width: 80vw;
 }
 
+#saved-recipe{
+  background-color:rgb(245, 245, 220);
+  margin:auto;
+  text-align: center;
+}
+
 #recipe-container{
   text-align: center;
 }
@@ -20,8 +26,8 @@
 }
 
 img {
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
 }
 
 .card {

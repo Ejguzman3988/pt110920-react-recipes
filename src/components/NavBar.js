@@ -1,11 +1,12 @@
 
 import React from 'react'
 
-function NavBar() {
+function NavBar(props) {
+
     return (
         <div id="nav-bar">
-            <button><h2> &#x1f357; ALL Recipes</h2></button>
-            <button><h2> &#x1f4d6; MY RECIPES</h2></button>
+            <button id="recipes" onClick={props.changePage}> &#x1f357; ALL Recipes</button>
+            <button id="saved" onClick={props.changePage}> &#x1f4d6; MY RECIPES</button>
         </div>
     )
 }

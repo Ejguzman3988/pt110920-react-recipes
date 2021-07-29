@@ -11,6 +11,14 @@ class App extends Component {
     saved: []
   }
 
+  changePage = (e) => {
+   
+    
+    this.setState({
+      page: e.target.id
+    })
+  }
+
   // We want to fetch on componentDidMount
   componentDidMount(){
     fetch('http://localhost:3001/recipes') 
@@ -28,15 +36,23 @@ class App extends Component {
     this.setState((prevState) => {
       // return { saved: prevState.saved.concat(foundRecipe) }
       return { saved: [...prevState.saved, foundRecipe]}
-    }, () => console.log("ADDTOSAVED: ", this.state.saved))
+    })
   }
 
   render() {
 
     return (
       <div className="app">
-        <NavBar /> 
-        <RecipesContainer saved={this.state.saved} addToSaved={this.addToSaved} recipes={this.state.recipes} /> 
+        <NavBar changePage={this.changePage} /> 
+        {this.state.page === "recipes" ? 
+            <RecipesContainer 
+                saved={this.state.saved} 
+                addToSaved={this.addToSaved} 
+                recipes={this.state.recipes}
+                 /> 
+            :
+            <SavedRecipes saved={this.state.saved} />
+          }
       </div>
     )
   }
