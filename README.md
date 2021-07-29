@@ -8,6 +8,8 @@ If you are insterested in the backend for this application here is a link to my 
 * Conversation about Class vs Functional Components
 * Add NavBar Functionality
 * Set Up Timer For Viewed Recipe.
+* Add Filter Functionality
+* Add Click Functionality
 
 ## Component Lifecycle Methods 
 
