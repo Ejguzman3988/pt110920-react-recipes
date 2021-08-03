@@ -9,6 +9,22 @@
   text-align: center;
 }
 
+#recipe-form{
+  background-color:rgb(245, 245, 220);
+  margin:auto;
+  text-align: center;
+  border: solid;
+}
+
+#error{
+  background-color:red;
+  color: yellow;
+  margin:auto;
+  text-align: center;
+  border-style: solid;
+  width: 300px;
+}
+
 #recipe-container{
   text-align: center;
 }
