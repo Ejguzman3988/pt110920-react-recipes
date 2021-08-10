@@ -2,10 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux';
+import RecipesReducer from './reducers/RecipesReducer';
+
+
+// ROOT REDUCER TAKE A LOOK AT NEXT TIME
+
+const store = createStore(RecipesReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

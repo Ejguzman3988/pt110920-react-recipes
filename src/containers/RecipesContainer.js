@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { recipeArray } from "../recipeArray"
+import { connect } from 'react-redux'
+
 import FilterBar from "../components/FilterBar"
 
 class RecipesContainer extends Component {
     render() {
-        const recipesJSX = recipeArray.recipes.map(r => {
+        const recipesJSX = this.props.recipes.map(r => {
             return (
             <div className="card">
                 <h3>Title: {r.title}</h3>
@@ -24,4 +25,15 @@ class RecipesContainer extends Component {
     }
 }
 
-export default RecipesContainer
+const mapStateToProps = (stateFromTheStore) => {
+    return { recipes: stateFromTheStore.recipes}
+}
+
+// MDTP
+// Dispatch
+// Actions
+
+                // connect() -> returns function, That function expects a component
+                // In the argument
+                // connect(store stuff)( component )
+export default connect(mapStateToProps)(RecipesContainer)
