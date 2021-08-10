@@ -3,6 +3,15 @@
   width: 80vw;
 }
 
+#loading{
+  background-color:rgb(245, 245, 220);
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+}
+
 #saved-recipe{
   background-color:rgb(245, 245, 220);
   margin:auto;
