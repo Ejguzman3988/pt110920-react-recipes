@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
-import RecipesReducer from './reducers/RecipesReducer';
+import rootReducer from './reducers';
 
 
 // ROOT REDUCER TAKE A LOOK AT NEXT TIME
 
-const store = createStore(RecipesReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
 
 
 ReactDOM.render(

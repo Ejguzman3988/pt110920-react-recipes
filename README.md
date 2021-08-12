@@ -15,3 +15,19 @@ Vocab List:
 - Provider: Provides our store to the app! 
 - Connect: connects the store to our components
 - mapStateToProps: a function has argument of the state from the store, and returns our new props. 
+
+### Deliverables
+
+- Review: 
+  State management system 
+  - created our store using createStore from redux
+  - Provided our store to all components
+  - Used connect to actually access our store
+  - mapStateToProps to get recipes inside recipescontainer
+- Today: 
+  - mapDispatchToProps - second argument to connect its how dispatch in components
+  - Dispatch - how we pass an action to our reducer
+  - action - js obj with a type and a payload
+  - reducers - returns the new state, and the state can get modified by actions 
+  - rootReducer - combines reducers
+

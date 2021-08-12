@@ -16,6 +16,7 @@ class App extends Component {
       <div class="app">
         <NavBar /> 
         <RecipesContainer /> 
+        <SavedRecipes />
       </div>
     )
   }
