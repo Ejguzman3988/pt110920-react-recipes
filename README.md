@@ -1,3 +1,23 @@
+# Async Redux
+Making an asynchronous request with redux. We will connect a backend with our current project and learn how we can use fetch to pass data to our backend.
+
+---
+## Deliverables
+---
+1. Create our rails backend
+    1. Whitelist our server
+    1. Seed Some data
+1. Try to fetch in redux
+    1. see what happens when we try to fetch using our dispatch
+1. Apply middleware
+    1. Take a look at thunk, and see how it affects our action
+    1. make a get request to our backend using fetch
+        1. get all recipes
+    1. make a post request to our backend using fetch
+        1. add a recipe
+1. Create a loading screen
+
+
 # React-Redux
 
 - What is Redux and why we use it?
