@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 class SavedRecipes extends Component {
     render() {
         return (
-            <div id="recipe-container">
+            <div id="saved-container">
                 <h1>SAVED RECIPES</h1>
                 <p>{this.props.saved.join(" - ")}</p>
             </div>

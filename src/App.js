@@ -4,20 +4,29 @@ import SavedRecipes from './containers/SavedRecipes'
 import NavBar from './components/NavBar'
 import "./App.css"
 import { connect } from 'react-redux'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 class App extends Component {
   state = {
-    page: "recipes",
     saved: []
   }
 
   render() {
     return (
-      <div class="app">
-        <NavBar /> 
-        <RecipesContainer /> 
-        <SavedRecipes />
-      </div>
+      <Router>
+        <div class="app">
+          <NavBar />
+          <Switch>
+            <Route path="/recipes" component={(routerInfo) => <RecipesContainer routerInfo={routerInfo} />}  />
+            <Route path="/saved_recipes" component={(routerInfo) =>  <SavedRecipes routerInfo={routerInfo} />}  />
+          </Switch> 
+        </div>
+      </Router>
     )
   }
 }

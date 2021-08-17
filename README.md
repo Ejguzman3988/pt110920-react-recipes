@@ -4,6 +4,9 @@ Making an asynchronous request with redux. We will connect a backend with our cu
 ---
 ## Deliverables
 ---
+1. I set up Routing.
+1. Review what we did last time.
+1. Fix our Add to Saved.
 1. Create our rails backend
     1. Whitelist our server
     1. Seed Some data

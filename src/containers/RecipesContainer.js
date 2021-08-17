@@ -12,7 +12,7 @@ class RecipesContainer extends Component {
                 <h3>Title: {r.title}</h3>
                 <p>Time: {r.time} mins</p>
                 <img alt="recipe" src={r.image}></img> <br/>
-                <button onClick={() => this.props.dispatch(addSaved(r))}> Add to Recipe Book </button> 
+                <button onClick={() => this.props.addSaved(r)}> Add to Recipe Book </button> 
                 <div dangerouslySetInnerHTML={{__html: r.instructions}}></div>
             </div>
         )}) 
