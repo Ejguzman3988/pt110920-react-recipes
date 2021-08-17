@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Recipe from "../components/Recipe"
 
 
 class SavedRecipes extends Component {
     render() {
+        const recipes = this.props.saved.map( recipe => <Recipe recipe={recipe} />)
         return (
             <div id="saved-container">
                 <h1>SAVED RECIPES</h1>
-                <p>{this.props.saved.join(" - ")}</p>
+                <p>{recipes}</p>
             </div>
         )
     }

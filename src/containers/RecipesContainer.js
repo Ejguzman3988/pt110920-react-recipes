@@ -1,20 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {addSaved} from "../actions/savedActions"
-
 import FilterBar from "../components/FilterBar"
+import Recipe from '../components/Recipe'
 
 class RecipesContainer extends Component {
     render() {
         const recipesJSX = this.props.recipes.map(r => {
             return (
-            <div className="card">
-                <h3>Title: {r.title}</h3>
-                <p>Time: {r.time} mins</p>
-                <img alt="recipe" src={r.image}></img> <br/>
-                <button onClick={() => this.props.addSaved(r)}> Add to Recipe Book </button> 
-                <div dangerouslySetInnerHTML={{__html: r.instructions}}></div>
-            </div>
+                <Recipe recipe={r} addSaved={this.props.addSaved} />
         )}) 
         
         return (
