@@ -10,6 +10,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Loading from './svg/Loading'
 
 class App extends Component {
   state = {
