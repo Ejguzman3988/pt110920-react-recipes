@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import RecipesContainer from './containers/RecipesContainer'
 import SavedRecipes from './containers/SavedRecipes'
 import NavBar from './components/NavBar'
-import RecipeForm from './components/RecipeForm'
-import { ClimbingBoxLoader
+import { DotLoader
 } from 'react-spinners'
 import "./App.css"
 
@@ -61,7 +60,7 @@ class App extends Component {
                                                       addToSaved={this.addToSaved} 
                                                       recipes={this.state.recipes}
                                                       /> 
-                                              }/> : <h1 id="error"><ClimbingBoxLoader
+                                              }/> : <h1 id="error"><DotLoader
                                               /> </h1>}
                                                   
 

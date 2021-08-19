@@ -26,12 +26,17 @@
 }
 
 #error{
-  background-color:red;
+  height: 300px;
+  background-color:tan;
   color: yellow;
   margin:auto;
   text-align: center;
   border-style: solid;
   width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 #recipe-container{
