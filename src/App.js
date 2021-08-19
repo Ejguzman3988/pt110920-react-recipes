@@ -29,7 +29,7 @@ class App extends Component {
 
   // We want to fetch on componentDidMount
   componentDidMount(){
-    fetch('http://localhost:3001/recipes') 
+    fetch('https://guarded-brushlands-94315.herokuapp.com/') 
       .then(resp => resp.json())
       .then(recipes => {
         this.setState({ recipes: recipes}, () => console.log("THIS IS THE LOG FROM SETTING STATE:", this.state))
